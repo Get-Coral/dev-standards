@@ -1,5 +1,4 @@
 node_modules/
-pnpm-lock.yaml
 .npmrc.local
 *.log
 .DS_Store
