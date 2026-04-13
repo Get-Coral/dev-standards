@@ -2,6 +2,12 @@
 
 Shared TypeScript defaults for Coral repositories.
 
+## Install
+
+```bash
+pnpm add -D @get-coral/tsconfig
+```
+
 ## Usage
 
 In your repository `tsconfig.json`:

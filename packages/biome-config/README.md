@@ -2,6 +2,12 @@
 
 Shared Biome defaults used across Coral repositories.
 
+## Install
+
+```bash
+pnpm add -D @get-coral/biome-config
+```
+
 ## Usage
 
 In your repository `biome.json`:
