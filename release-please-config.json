@@ -1,5 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "bootstrap-sha": "43b4823ff74f75617886d97af3e5e41f485f0728",
   "packages": {
     "packages/biome-config": {
       "release-type": "node",
