@@ -1,5 +1,4 @@
 {
-  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/manifest.json",
   "packages/biome-config": "0.1.0",
   "packages/tsconfig": "0.1.0"
 }
