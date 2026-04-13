@@ -1,4 +1,4 @@
 {
-  "packages/biome-config": "0.2.0",
-  "packages/tsconfig": "0.2.0"
+  "packages/biome-config": "0.2.1",
+  "packages/tsconfig": "0.2.1"
 }
