@@ -1,0 +1,15 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "packages": {
+    "packages/biome-config": {
+      "release-type": "node",
+      "package-name": "@get-coral/biome-config",
+      "changelog-path": "packages/biome-config/CHANGELOG.md"
+    },
+    "packages/tsconfig": {
+      "release-type": "node",
+      "package-name": "@get-coral/tsconfig",
+      "changelog-path": "packages/tsconfig/CHANGELOG.md"
+    }
+  }
+}

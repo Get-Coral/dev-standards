@@ -1,0 +1,16 @@
+{
+  "name": "@get-coral/dev-standards",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Versioned shared development standards for Coral repositories",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Get-Coral/dev-standards.git"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@10.32.1",
+  "scripts": {
+    "check": "pnpm -r --if-present run check && pnpm -r --filter './packages/*' exec npm pack --dry-run",
+    "build": "pnpm -r --if-present run build"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "@get-coral/tsconfig",
+  "version": "0.1.0",
+  "description": "Shared TypeScript configuration for Coral repositories",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "base.json",
+    "react-start.json",
+    "README.md"
+  ],
+  "exports": {
+    "./base.json": "./base.json",
+    "./react-start.json": "./react-start.json"
+  },
+  "peerDependencies": {
+    "typescript": ">=5.7.0"
+  }
+}

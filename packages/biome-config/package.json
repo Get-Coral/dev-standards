@@ -1,0 +1,20 @@
+{
+  "name": "@get-coral/biome-config",
+  "version": "0.1.0",
+  "description": "Shared Biome configuration for Coral repositories",
+  "license": "MIT",
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "base.jsonc",
+    "README.md"
+  ],
+  "exports": {
+    "./base.jsonc": "./base.jsonc"
+  },
+  "peerDependencies": {
+    "@biomejs/biome": ">=2.4.0"
+  }
+}
