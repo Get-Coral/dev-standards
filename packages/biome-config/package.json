@@ -2,7 +2,24 @@
   "name": "@get-coral/biome-config",
   "version": "0.2.1",
   "description": "Shared Biome configuration for Coral repositories",
+  "keywords": [
+    "coral",
+    "biome",
+    "config",
+    "linter",
+    "formatter"
+  ],
   "license": "MIT",
+  "author": "ElianCodes <hello@elian.codes>",
+  "homepage": "https://getcoral.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Get-Coral/dev-standards.git",
+    "directory": "packages/biome-config"
+  },
+  "bugs": {
+    "url": "https://github.com/Get-Coral/dev-standards/issues"
+  },
   "type": "module",
   "publishConfig": {
     "access": "public"
