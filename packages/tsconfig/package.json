@@ -2,7 +2,24 @@
   "name": "@get-coral/tsconfig",
   "version": "0.2.1",
   "description": "Shared TypeScript configuration for Coral repositories",
+  "keywords": [
+    "coral",
+    "tsconfig",
+    "typescript",
+    "config"
+  ],
   "license": "MIT",
+  "author": "ElianCodes <hello@elian.codes>",
+  "homepage": "https://getcoral.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Get-Coral/dev-standards.git",
+    "directory": "packages/tsconfig"
+  },
+  "bugs": {
+    "url": "https://github.com/Get-Coral/dev-standards/issues"
+  },
+  "type": "module",
   "publishConfig": {
     "access": "public"
   },
