@@ -11,6 +11,11 @@
       "release-type": "node",
       "package-name": "@get-coral/tsconfig",
       "changelog-path": "packages/tsconfig/CHANGELOG.md"
+    },
+    "packages/telemetry": {
+      "release-type": "node",
+      "package-name": "@get-coral/telemetry",
+      "changelog-path": "packages/telemetry/CHANGELOG.md"
     }
   }
 }
