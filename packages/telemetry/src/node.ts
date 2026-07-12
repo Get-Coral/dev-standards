@@ -45,8 +45,8 @@ export function createNodeTelemetry(opts: TelemetryOptions): TelemetryClient {
 }
 
 export {
-	isTelemetryEnabled,
 	DEFAULT_HOST,
+	isTelemetryEnabled,
 	type TelemetryClient,
 	type TelemetryOptions,
 } from "./core.js";

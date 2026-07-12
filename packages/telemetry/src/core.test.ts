@@ -14,23 +14,35 @@ describe("isTelemetryEnabled (opt-out semantics)", () => {
 	});
 
 	it("honors an explicit disabled override", () => {
-		expect(isTelemetryEnabled({ apiKey: key, disabled: true, env: {} })).toBe(false);
+		expect(isTelemetryEnabled({ apiKey: key, disabled: true, env: {} })).toBe(
+			false,
+		);
 	});
 
 	it("honors DO_NOT_TRACK", () => {
-		expect(isTelemetryEnabled({ apiKey: key, env: { DO_NOT_TRACK: "1" } })).toBe(false);
-		expect(isTelemetryEnabled({ apiKey: key, env: { DO_NOT_TRACK: "true" } })).toBe(false);
+		expect(
+			isTelemetryEnabled({ apiKey: key, env: { DO_NOT_TRACK: "1" } }),
+		).toBe(false);
+		expect(
+			isTelemetryEnabled({ apiKey: key, env: { DO_NOT_TRACK: "true" } }),
+		).toBe(false);
 	});
 
 	it("honors CORAL_TELEMETRY off values", () => {
 		for (const v of ["0", "false", "off", "no", "disabled", "OFF"]) {
-			expect(isTelemetryEnabled({ apiKey: key, env: { CORAL_TELEMETRY: v } })).toBe(false);
+			expect(
+				isTelemetryEnabled({ apiKey: key, env: { CORAL_TELEMETRY: v } }),
+			).toBe(false);
 		}
 	});
 
 	it("stays enabled for non-off CORAL_TELEMETRY values", () => {
-		expect(isTelemetryEnabled({ apiKey: key, env: { CORAL_TELEMETRY: "1" } })).toBe(true);
-		expect(isTelemetryEnabled({ apiKey: key, env: { CORAL_TELEMETRY: "on" } })).toBe(true);
+		expect(
+			isTelemetryEnabled({ apiKey: key, env: { CORAL_TELEMETRY: "1" } }),
+		).toBe(true);
+		expect(
+			isTelemetryEnabled({ apiKey: key, env: { CORAL_TELEMETRY: "on" } }),
+		).toBe(true);
 	});
 });
 

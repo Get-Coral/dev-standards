@@ -18,7 +18,9 @@ export interface BrowserTelemetryOptions extends TelemetryOptions {
  * SSR (no `window`) and whenever telemetry is disabled. posthog-js manages its
  * own anonymous id in localStorage; person profiles are never created.
  */
-export function createBrowserTelemetry(opts: BrowserTelemetryOptions): TelemetryClient {
+export function createBrowserTelemetry(
+	opts: BrowserTelemetryOptions,
+): TelemetryClient {
 	if (typeof window === "undefined" || !isTelemetryEnabled(opts)) {
 		return createNoopClient();
 	}
@@ -64,8 +66,8 @@ export function createBrowserTelemetry(opts: BrowserTelemetryOptions): Telemetry
 }
 
 export {
-	isTelemetryEnabled,
 	DEFAULT_HOST,
+	isTelemetryEnabled,
 	type TelemetryClient,
 	type TelemetryOptions,
 } from "./core.js";

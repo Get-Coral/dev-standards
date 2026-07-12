@@ -41,7 +41,8 @@ export function isTelemetryEnabled(input: {
 	if (!input.apiKey) return false;
 
 	const env =
-		input.env ?? (typeof process !== "undefined" && process.env ? process.env : {});
+		input.env ??
+		(typeof process !== "undefined" && process.env ? process.env : {});
 
 	const dnt = (env.DO_NOT_TRACK ?? "").toLowerCase();
 	if (dnt === "1" || dnt === "true") return false;
@@ -77,7 +78,9 @@ export function createNoopClient(): TelemetryClient {
 }
 
 /** Base properties attached to every event. */
-export function baseProperties(opts: TelemetryOptions): Record<string, unknown> {
+export function baseProperties(
+	opts: TelemetryOptions,
+): Record<string, unknown> {
 	return {
 		module: opts.module,
 		module_version: opts.version ?? null,
