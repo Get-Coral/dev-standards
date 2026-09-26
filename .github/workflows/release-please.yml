@@ -67,6 +67,11 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Publish to npm
-        run: pnpm -r --filter './packages/*' publish --access public --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        # Trusted publishing (OIDC) — no NPM_TOKEN. Published with npm rather
+        # than pnpm because the pnpm fixes for OIDC alongside the .npmrc that
+        # actions/setup-node writes only landed in pnpm 11.1.3.
+        run: |
+          for dir in packages/*/; do
+            echo "Publishing $dir"
+            (cd "$dir" && npm publish --access public --provenance)
+          done
