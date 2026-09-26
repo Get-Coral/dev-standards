@@ -1,5 +1,5 @@
 {
   "packages/biome-config": "0.2.1",
   "packages/tsconfig": "0.2.1",
-  "packages/telemetry": "0.1.0"
+  "packages/telemetry": "0.2.0"
 }
