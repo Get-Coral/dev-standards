@@ -20,10 +20,12 @@ export const coralLint = {
 		suspicious: "warn",
 	},
 	rules: {
-		// Biome `suspicious/noDebugger`, `noConsole`, `noDoubleEquals`.
+		// Biome `suspicious/noDebugger`, `noConsole`, `noDoubleEquals` (which allows `== null`).
 		"no-debugger": "error",
 		"no-console": "warn",
-		eqeqeq: "warn",
+		eqeqeq: ["warn", "always", { null: "ignore" }],
+		// Side-effect imports are how CSS gets in.
+		"import/no-unassigned-import": ["warn", { allow: ["**/*.css"] }],
 		// Biome `style/useConst`, `useTemplate`.
 		"prefer-const": "error",
 		"prefer-template": "warn",
