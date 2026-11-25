@@ -1,4 +1,5 @@
 import { PostHog } from "posthog-node";
+
 import { getOrCreateAnonymousId } from "./anonymous-id.js";
 import {
 	baseProperties,

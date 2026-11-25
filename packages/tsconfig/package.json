@@ -1,38 +1,38 @@
 {
-  "name": "@get-coral/tsconfig",
-  "version": "0.2.1",
-  "description": "Shared TypeScript configuration for Coral repositories",
-  "keywords": [
-    "coral",
-    "tsconfig",
-    "typescript",
-    "config"
-  ],
-  "license": "MIT",
-  "author": "ElianCodes <hello@elian.codes>",
-  "homepage": "https://getcoral.dev",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Get-Coral/dev-standards.git",
-    "directory": "packages/tsconfig"
-  },
-  "bugs": {
-    "url": "https://github.com/Get-Coral/dev-standards/issues"
-  },
-  "type": "module",
-  "publishConfig": {
-    "access": "public"
-  },
-  "files": [
-    "base.json",
-    "react-start.json",
-    "README.md"
-  ],
-  "exports": {
-    "./base.json": "./base.json",
-    "./react-start.json": "./react-start.json"
-  },
-  "peerDependencies": {
-    "typescript": ">=5.7.0"
-  }
+	"name": "@get-coral/tsconfig",
+	"version": "0.2.1",
+	"description": "Shared TypeScript configuration for Coral repositories",
+	"keywords": [
+		"config",
+		"coral",
+		"tsconfig",
+		"typescript"
+	],
+	"homepage": "https://getcoral.dev",
+	"bugs": {
+		"url": "https://github.com/Get-Coral/dev-standards/issues"
+	},
+	"license": "MIT",
+	"author": "ElianCodes <hello@elian.codes>",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Get-Coral/dev-standards.git",
+		"directory": "packages/tsconfig"
+	},
+	"files": [
+		"base.json",
+		"react-start.json",
+		"README.md"
+	],
+	"type": "module",
+	"exports": {
+		"./base.json": "./base.json",
+		"./react-start.json": "./react-start.json"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"peerDependencies": {
+		"typescript": ">=5.7.0"
+	}
 }

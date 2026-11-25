@@ -17,9 +17,9 @@ pnpm add @get-coral/telemetry
 import { createNodeTelemetry } from "@get-coral/telemetry/node";
 
 const telemetry = createNodeTelemetry({
-  module: "create-coral",
-  version: "1.0.3",
-  apiKey: process.env.CORAL_POSTHOG_KEY, // absent → no-op
+	module: "create-coral",
+	version: "1.0.3",
+	apiKey: process.env.CORAL_POSTHOG_KEY, // absent → no-op
 });
 
 telemetry.capture("module_scaffolded", { template: "default", installed: true });
@@ -32,9 +32,9 @@ await telemetry.shutdown(); // flush before a short-lived process exits
 import { createBrowserTelemetry } from "@get-coral/telemetry/browser";
 
 const telemetry = createBrowserTelemetry({
-  module: "aurora",
-  version: "1.11.0",
-  apiKey: import.meta.env.VITE_CORAL_POSTHOG_KEY,
+	module: "aurora",
+	version: "1.11.0",
+	apiKey: import.meta.env.VITE_CORAL_POSTHOG_KEY,
 });
 
 telemetry.capture("playback_started", { media_type: "movie" });
