@@ -16,6 +16,16 @@
       "release-type": "node",
       "package-name": "@get-coral/telemetry",
       "changelog-path": "packages/telemetry/CHANGELOG.md"
+    },
+    "packages/oxlint-config": {
+      "release-type": "node",
+      "package-name": "@get-coral/oxlint-config",
+      "changelog-path": "packages/oxlint-config/CHANGELOG.md"
+    },
+    "packages/oxfmt-config": {
+      "release-type": "node",
+      "package-name": "@get-coral/oxfmt-config",
+      "changelog-path": "packages/oxfmt-config/CHANGELOG.md"
     }
   }
 }

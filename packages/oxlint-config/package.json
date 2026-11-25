@@ -1,0 +1,56 @@
+{
+	"name": "@get-coral/oxlint-config",
+	"version": "0.0.0",
+	"description": "Shared Oxlint rules for Coral repositories, for Vite+ and Oxlint",
+	"keywords": [
+		"config",
+		"coral",
+		"lint",
+		"linter",
+		"oxlint",
+		"vite-plus"
+	],
+	"homepage": "https://getcoral.dev",
+	"bugs": {
+		"url": "https://github.com/Get-Coral/dev-standards/issues"
+	},
+	"license": "MIT",
+	"author": "ElianCodes <hello@elian.codes>",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Get-Coral/dev-standards.git",
+		"directory": "packages/oxlint-config"
+	},
+	"files": [
+		"dist",
+		"README.md"
+	],
+	"type": "module",
+	"main": "./dist/index.mjs",
+	"types": "./dist/index.d.mts",
+	"exports": {
+		".": "./dist/index.mjs",
+		"./package.json": "./package.json"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"build": "vp pack",
+		"dev": "vp pack --watch",
+		"typecheck": "tsc --noEmit",
+		"prepublishOnly": "pnpm build"
+	},
+	"devDependencies": {
+		"typescript": "^5.9.3",
+		"vite-plus": "catalog:"
+	},
+	"peerDependencies": {
+		"vite-plus": ">=1.8.0"
+	},
+	"peerDependenciesMeta": {
+		"vite-plus": {
+			"optional": true
+		}
+	}
+}

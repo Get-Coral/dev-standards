@@ -14,14 +14,14 @@ In your repository `tsconfig.json`:
 
 ```json
 {
-  "extends": "./node_modules/@get-coral/tsconfig/react-start.json",
-  "compilerOptions": {
-    "paths": {
-      "#/*": ["./src/*"],
-      "@/*": ["./src/*"]
-    },
-    "types": ["vite/client"]
-  }
+	"extends": "./node_modules/@get-coral/tsconfig/react-start.json",
+	"compilerOptions": {
+		"paths": {
+			"#/*": ["./src/*"],
+			"@/*": ["./src/*"]
+		},
+		"types": ["vite/client"]
+	}
 }
 ```
 

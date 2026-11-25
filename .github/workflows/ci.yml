@@ -14,18 +14,16 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - uses: pnpm/action-setup@v6
-        with:
-          version: 10.32.1
-
-      - uses: actions/setup-node@v6
+      - uses: voidzero-dev/setup-vp@cab1ab9eaff52d4857875f4f2c016e36af8f2c76 # v1.22.0
         with:
           node-version: 24
-          cache: pnpm
-          cache-dependency-path: pnpm-lock.yaml
+          cache: true
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+      - name: Build packages
+        run: vp run build
 
-      - name: Verify package artifacts
-        run: pnpm check
+      - name: Test
+        run: vp run test
+
+      - name: Lint, format, typecheck and verify package artifacts
+        run: vp run check

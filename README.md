@@ -7,15 +7,18 @@ Shared, versioned development defaults for Coral repositories.
 
 ## Packages
 
-- `@get-coral/biome-config`: shared Biome formatting, linting, and import organization rules.
+- `@get-coral/oxlint-config`: shared Oxlint rules, for the `lint` block of a Vite+ `vite.config.ts`.
+- `@get-coral/oxfmt-config`: shared Oxfmt options, for the `fmt` block of a Vite+ `vite.config.ts`.
 - `@get-coral/tsconfig`: shared TypeScript defaults for Coral web modules.
+- `@get-coral/telemetry`: anonymous, opt-out telemetry client for Coral modules and CLIs.
+- `@get-coral/biome-config`: **deprecated**, superseded by the two Oxc packages above.
 
 ## Automated publish flow
 
 1. Push conventional commits to `main`.
 2. Release Please opens or updates release PRs for changed packages.
 3. Merge the release PR.
-4. The release workflow publishes `@get-coral/biome-config` and `@get-coral/tsconfig` to npm.
+4. The release workflow publishes every package under `packages/` to npm.
 
 Required GitHub secret:
 
@@ -28,7 +31,9 @@ Workflows:
 
 ## Consumption in templates and repos
 
-- Biome: `extends` from `@get-coral/biome-config`.
+- Lint and format (Vite+): `lint: { extends: [coralReactLint] }` and `fmt: { ...coralFmt }` in `vite.config.ts`.
 - TypeScript: `extends` from `@get-coral/tsconfig`.
+
+This repository uses Vite+ itself: `pnpm check` runs `vp check` (format, lint, type-aware lint) with the presets from source.
 
 This gives all newly scaffolded repositories consistent defaults while allowing controlled version upgrades over time.
